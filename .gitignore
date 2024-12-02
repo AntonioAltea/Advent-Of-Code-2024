@@ -1,0 +1,11 @@
+# Ignore cmake-build-deb folder
+cmake-build-debug/
+
+# Ignore .idea folder
+.idea/
+
+# Ignore all .txt files
+*.txt
+
+# But do not ignore CMakeLists.txt
+!CMakeLists.txt
