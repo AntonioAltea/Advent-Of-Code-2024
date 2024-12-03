@@ -9,3 +9,5 @@ cmake-build-debug/
 
 # But do not ignore CMakeLists.txt
 !CMakeLists.txt
+
+.clang-tidy

@@ -12,7 +12,7 @@ std::tuple<std::vector<int>, std::vector<int>> parseInputFile(const std::string 
 
 int distanceBetweenVectors(std::vector<int> v1, std::vector<int> v2);
 
-int similarityScore(const std::vector<int>& v1, std::vector<int> v2);
+int similarityScore(const std::vector<int> &v1, std::vector<int> v2);
 
 int main() {
 
@@ -75,15 +75,14 @@ int distanceBetweenVectors(std::vector<int> v1, std::vector<int> v2) {
     return totalDistance;
 }
 
-int similarityScore(const std::vector<int>& v1, std::vector<int> v2) {
+int similarityScore(const std::vector<int> &v1, std::vector<int> v2) {
     auto totalScore{0};
     std::map<int, int> scoreValueMap;
 
     for (auto num: v1) {
         if (scoreValueMap.find(num) != scoreValueMap.end()) {
             totalScore += scoreValueMap[num] * num;
-        }
-        else {
+        } else {
             auto numFrequency = std::count(v2.begin(), v2.end(), num);
             auto scoreValue = numFrequency * num;
             totalScore += scoreValue;
